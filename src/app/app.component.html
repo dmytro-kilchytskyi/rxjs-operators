@@ -1,0 +1,15 @@
+<h1>Example 1</h1>
+<input type="text" [formControl]="search" />
+
+<h1>Example 2</h1>
+<div *ngFor="let user of MOCK_USERS; let i = index">
+  <input [id]="i" type="checkbox" (click)="updateUser()" />
+  <label [for]="i">{{ user.name }}</label>
+</div>
+
+<h1>Example 3</h1>
+<p>Data: {{ MOCK_USERS | json }}</p>
+<button (click)="import()">Import</button>
+
+<h1>Example 4</h1>
+<button (click)="export()">Export</button>
